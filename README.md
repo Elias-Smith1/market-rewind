@@ -1,7 +1,13 @@
+<!--
+This Markdown file documents setup and maintenance for a human reader; the game loads index.html, not this file. Markdown is plain text with formatting: # introduces a heading, - a list item, and backticks mark code text. HTML comments like this remain hidden when Markdown is rendered.
+-->
 # Market Rewind — GitHub Pages edition
 
 A complete static educational stock game. No build, server, API key, subscription, or Sites dependency is required. Source is plain HTML, CSS and JavaScript. All market data is bundled in prices.js. Fonts are bundled locally, with their licenses in fonts/. No external stylesheet or background market-data request is needed.
 
+<!--
+Explain how to upload the complete files and turn on hosting. A repository is a project folder with a recorded history of changes.
+-->
 ## Publish on GitHub Pages
 
 1. Unzip this archive.
@@ -14,10 +20,16 @@ Official instructions: https://docs.github.com/en/pages/getting-started-with-git
 
 GitHub Pages is generally publicly accessible; the private Sites preview does not make the GitHub deployment private.
 
+<!--
+Explain how to serve the files on your own computer. This preview server is a development convenience, not a requirement for website visitors.
+-->
 ## Preview locally
 
 For a normal HTTP preview, run `python -m http.server 8080` in this folder and visit http://localhost:8080. Python is only a preview convenience; it is not needed by visitors or GitHub Pages.
 
+<!--
+Summarize the existing app capabilities; this list does not turn features on or change the program.
+-->
 ## Features
 
 - Six introductory lessons (including volume) with simple visuals and a seventh further-reading page.
@@ -31,6 +43,9 @@ For a normal HTTP preview, run `python -m http.server 8080` in this folder and v
 - Stock identity hidden until a buy or pass decision; clear calendar-day holding choices.
 - Relative asset URLs and hash navigation: no routing rewrites needed.
 
+<!--
+Explain the fixed dataset and simplified fills so results are not mistaken for real execution guarantees.
+-->
 ## Data and limitations
 
 Source: Yahoo Finance chart endpoint. Retrieved November 5, 2026. Fixed daily snapshot: original six stocks through November 5, 2026; six added stocks through November 4, 2026. Each round shows its actual last available date; not a live feed. Dates are explicitly displayed in the game. No intraday records: 1D shows one daily OHLC candle. Historical OHLC prices are split-adjusted by the provider, so they are not an exact vintage market screen. No dividends, fees, taxes, spread, slippage or real liquidity are modeled. No historical market cap is shown because reliable dated shares outstanding are not included. MAX covers available provider records, which can start after an IPO.
@@ -41,16 +56,25 @@ Holding choices are 1 calendar day, 1 week, 30 days, 365 days, or the latest ava
 
 The 12-stock sample includes many losses but still has selection and survivorship bias. Stock identities are concealed in the interface until the decision; the static data remains inspectable. Technical observations are descriptive, not predictive. Future data is bundled and can be inspected by a technical visitor; this is not a secure competition.
 
+<!--
+Explain the file format and refresh process. A snapshot is a fixed copy of data from a particular date; refreshing it is separate from playing.
+-->
 ## Update the snapshot
 
 prices.js assigns an object to window.MARKET_DATA. Each ticker has a name, source URL, firstTradeDate and rows. A row is [YYYY-MM-DD, open, high, low, close, volume]. Rows must be chronological, unique and contain finite positive prices and nonnegative volume. Preserve full available history for the long chart ranges.
 
 To refresh, retrieve the provider's full daily history for each ticker using explicit period1 and period2 timestamps with interval=1d (range=max may silently aggregate). Validate the response, remove incomplete/null sessions and set a consistent completed-session cutoff. Replace prices.js only after all twelve symbols succeed. Update the latest-data option and the data/methodology dates in app.js, and this README, to match the new verified cutoff. Do not automatically assume that a response contains today's completed close. Provider licensing and access policies apply separately from this application source.
 
+<!--
+Explain where notes are kept and which service handles page requests.
+-->
 ## Privacy
 
 No account or analytics. The journal is kept in localStorage on the visitor's browser. It is not encrypted and should not contain sensitive personal information. Only the latest 30 validated records are kept. Clear it in the game or through browser storage settings. The hosting service handles requests under its own policy. Fonts and other assets are served from the same site.
 
+<!--
+List reading sources. They are context for the lessons, not program dependencies.
+-->
 ## Educational references
 
 - SEC Investor.gov — Stocks: https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks
@@ -60,6 +84,9 @@ No account or analytics. The journal is kept in localStorage on the visitor's br
 
 - Fidelity — Reading volume: https://www.fidelity.com/viewpoints/active-investor/stock-volume
 
+<!--
+Explain browser protections and the limits of client-side practice, to guide future changes.
+-->
 ## Security maintenance
 
 The page declares a restrictive Content Security Policy before loading any assets: scripts/styles/fonts from this site only, no inline script or style attributes, no dynamic code evaluation, no background network connections, no embedded frames or plug-ins, no base-URL override, and no form navigation. Event handlers are registered by the local app script. A no-referrer policy is also declared. Keep assets local when making edits; third-party embeds or APIs will require a deliberate policy review.

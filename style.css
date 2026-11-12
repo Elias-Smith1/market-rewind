@@ -1,78 +1,491 @@
-@font-face {
+/*
+CSS (Cascading Style Sheets) controls appearance. A rule has a selector (what to style) followed by declarations inside braces. Each declaration is property: value;. A dot selects a class; # selects an id. Spaces mean inside another element, > means a direct child, and commas share a rule across targets. The cascade combines rules, using specificity (how targeted a selector is) and order to settle ties.
+Margin is outside space; padding is inside space; borders surround a box. px means CSS pixels, a layout unit; % means a proportion of another size. Flexbox arranges a row/column; Grid arranges rows and columns; gap spaces their items. A pseudo-class after a colon selects a condition such as hover; a pseudo-element creates a stylable part. Responsive rules adapt a layout to screen width. Comments do not display or alter layout. Original rules remain in their original order.
+*//*
+Load a local font weight: font-family names the typeface, font-weight its thickness, src its file location, and truetype the font format. font-display:swap permits fallback text during loading. No third-party font request is needed.
+*/@font-face {
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: url(./fonts/b0ae3e89a7d3ef2b.ttf) format('truetype');
 }
-@font-face {
+/*
+Load a local font weight: font-family names the typeface, font-weight its thickness, src its file location, and truetype the font format. font-display:swap permits fallback text during loading. No third-party font request is needed.
+*/@font-face {
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
   src: url(./fonts/376427b5322148d8.ttf) format('truetype');
 }
-@font-face {
+/*
+Load a local font weight: font-family names the typeface, font-weight its thickness, src its file location, and truetype the font format. font-display:swap permits fallback text during loading. No third-party font request is needed.
+*/@font-face {
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
   src: url(./fonts/b79a2ea7a38f33fd.ttf) format('truetype');
 }
-@font-face {
+/*
+Load a local font weight: font-family names the typeface, font-weight its thickness, src its file location, and truetype the font format. font-display:swap permits fallback text during loading. No third-party font request is needed.
+*/@font-face {
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
   src: url(./fonts/2a8e7f713ee79fbc.ttf) format('truetype');
 }
-@font-face {
+/*
+Load a local font weight: font-family names the typeface, font-weight its thickness, src its file location, and truetype the font format. font-display:swap permits fallback text during loading. No third-party font request is needed.
+*/@font-face {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: url(./fonts/ed335894f8d95426.ttf) format('truetype');
 }
-@font-face {
+/*
+Load a local font weight: font-family names the typeface, font-weight its thickness, src its file location, and truetype the font format. font-display:swap permits fallback text during loading. No third-party font request is needed.
+*/@font-face {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
   src: url(./fonts/437dc9f921739a68.ttf) format('truetype');
 }
-@font-face {
+/*
+Load a local font weight: font-family names the typeface, font-weight its thickness, src its file location, and truetype the font format. font-display:swap permits fallback text during loading. No third-party font request is needed.
+*/@font-face {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
   src: url(./fonts/68ed4be49ec7d32f.ttf) format('truetype');
 }
-@font-face {
+/*
+Load a local font weight: font-family names the typeface, font-weight its thickness, src its file location, and truetype the font format. font-display:swap permits fallback text during loading. No third-party font request is needed.
+*/@font-face {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
   src: url(./fonts/ea1f264039fed13f.ttf) format('truetype');
 }
-@font-face {
+/*
+Load a local font weight: font-family names the typeface, font-weight its thickness, src its file location, and truetype the font format. font-display:swap permits fallback text during loading. No third-party font request is needed.
+*/@font-face {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 800;
   font-display: swap;
   src: url(./fonts/a8291b05b2732801.ttf) format('truetype');
 }
-:root{--ink:#182d2b;--muted:#697773;--green:#186b52;--mint:#eaf2dc;--line:#e1e6de;--paper:#f7f8f2;--red:#ab4d47}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:14px 'DM Sans',Arial,sans-serif}button,input,select,textarea{font:inherit}button,a,input,select,summary{ -webkit-tap-highlight-color:transparent}button,a{touch-action:manipulation}a{color:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #98b85b;outline-offset:3px}header{height:91px;max-width:1440px;margin:auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:20px}.brand{font:800 21px Manrope,Arial;text-decoration:none;letter-spacing:-1px;white-space:nowrap}.brand>span:not(.brand-icon){font-weight:400}.brand-icon{display:inline-flex;background:var(--ink);color:#d8edb5;border-radius:50%;width:30px;height:30px;align-items:center;justify-content:center;margin-right:8px;font-size:26px}.brand sup{font:700 9px Arial;letter-spacing:1px;margin-left:5px;vertical-align:top}nav{display:flex;gap:30px;align-items:center}nav a{text-decoration:none;color:var(--muted);font-size:13px;padding:35px 0}nav a.active{color:var(--ink);box-shadow:inset 0 -2px var(--green)}.practice{font-size:11px;color:var(--muted);white-space:nowrap}i{display:inline-block;width:6px;height:6px;background:#62954f;border-radius:50%;margin-right:6px}main{max-width:1300px;margin:auto;padding:47px 36px 45px}.eyebrow{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);display:flex;align-items:center;gap:9px}.eyebrow:before{content:'';display:inline-block;width:19px;height:1px;background:var(--green)}h1,h2,h3{font-family:Manrope,Arial,sans-serif}h1{font-size:46px;letter-spacing:-2px;line-height:1.16;margin:17px 0 13px;max-width:700px;font-weight:600}h1 em{font-family:Georgia,serif;font-weight:400;color:var(--green)}p{color:var(--muted);line-height:1.7}h2{font-size:25px;letter-spacing:-.8px}h3{font-size:16px}.intro{display:flex;justify-content:space-between;align-items:center;margin-bottom:34px}.intro p{max-width:610px;font-size:14px;margin-bottom:0}.intro .guide{max-width:230px;line-height:1.7;font-size:12px;border-left:1px solid #ccd4c5;padding-left:24px;color:var(--muted)}.steps{display:flex;gap:30px;margin:0 0 27px;color:var(--muted);font-size:11px}.steps span{display:flex;align-items:center;gap:8px}.steps b{display:grid;place-items:center;border:1px solid #d3dbd0;width:21px;height:21px;border-radius:50%;font-size:10px}.steps .current{color:var(--green)}.steps .current b{background:var(--green);color:white;border-color:var(--green)}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:20px;align-items:start}.panel{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}.chart-panel{padding:25px 26px 14px}.stock-top{display:flex;justify-content:space-between;gap:15px}.identity{display:flex;gap:12px;align-items:center}.symbol-icon{width:42px;height:42px;display:grid;place-items:center;background:#f0f3ed;border-radius:10px;font-weight:bold;font-size:14px}.identity h2{font-size:18px;margin:0 0 4px;letter-spacing:-.4px}.identity small{font-size:11px;color:var(--muted)}.date-stamp{border:1px solid var(--line);border-radius:6px;font-size:10px;padding:8px 11px;height:max-content;color:var(--muted);text-align:right}.date-stamp strong{display:block;font-size:12px;color:var(--ink);margin-top:3px}.quote{display:flex;align-items:baseline;gap:12px;margin-top:25px}.price{font:600 34px Manrope;letter-spacing:-1.5px}.positive{color:var(--green)}.negative{color:var(--red)}.quote small{font-size:11px}.chart-controls{display:flex;justify-content:space-between;gap:10px;margin:24px 0 8px;align-items:center;flex-wrap:wrap}.ranges{display:flex;gap:2px}.ranges button,.view-toggle button{background:none;border:0;color:var(--muted);padding:7px 9px;font-size:10px;border-radius:5px}.ranges button.selected,.view-toggle button.selected{background:var(--mint);color:var(--green);font-weight:700}.view-toggle{border:1px solid var(--line);padding:2px;border-radius:6px}.view-toggle button{padding:5px 7px}.chart-wrap{position:relative}.chart-wrap svg{width:100%;display:block;height:300px}.chart-info{min-height:20px;color:var(--muted);font-size:10px}.legend{display:flex;gap:16px;font-size:10px;color:var(--muted);padding:8px 0 15px;border-bottom:1px solid var(--line)}.legend b{display:inline-block;width:13px;height:2px;vertical-align:middle;margin-right:5px;background:var(--green)}.legend .gold{background:#b6a46a}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:18px 0 10px}.metrics small{display:block;color:var(--muted);font-size:10px;margin-bottom:7px}.metrics strong{font-size:12px}.data-note{font-size:10px;line-height:1.6;color:var(--muted);padding-top:10px}.ticket{padding:23px}.ticket h3{margin:0 0 6px}.ticket p{font-size:11px;line-height:1.6;margin:0 0 20px}.balance{display:flex;justify-content:space-between;padding:12px;background:#f4f6ef;border-radius:6px;font-size:11px;margin-bottom:20px}.balance span{color:var(--muted)}label{display:block;font-size:11px;font-weight:600;margin-top:17px;margin-bottom:7px}select,input,textarea{width:100%;border:1px solid #dce2d8;border-radius:6px;background:white;padding:11px;color:var(--ink)}input[type=checkbox]{width:auto}textarea{resize:vertical;min-height:64px}.estimate{display:flex;justify-content:space-between;font-size:11px;padding:17px 0;margin-top:4px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;border:1px solid var(--line);background:white;color:var(--ink);padding:12px 18px;border-radius:7px;font-size:12px;font-weight:600;text-decoration:none}.btn.primary{background:var(--green);color:white;border-color:var(--green)}.btn:hover{filter:brightness(.96)}.ticket .btn{width:100%;margin:5px 0}.ticket .pass{background:transparent;color:var(--muted)}.ticket .fine{font-size:10px;margin:14px 0 0;text-align:center}.small-tip{padding:16px 20px;margin-top:14px;background:#eff3e8;border:1px solid #e1e7d7;border-radius:9px;font-size:11px;line-height:1.7;color:#5f6d5a}.small-tip strong{color:var(--ink);display:block;font-size:11px;margin-bottom:3px}.bottom-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:25px;margin-top:29px}.bottom-row>div{display:flex;gap:12px;padding:7px 5px}.bottom-row .num{color:#839078;font-size:19px;font-family:Georgia}.bottom-row h3{font-size:12px;margin:0 0 4px}.bottom-row p{font-size:11px;margin:0}.link-btn{border:0;background:none;padding:0;color:var(--green);font-size:11px;text-decoration:underline;cursor:pointer}footer{border-top:1px solid var(--line);max-width:1228px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:24px 0;gap:15px;color:var(--muted);font-size:10px}footer .brand{font-size:15px;color:var(--ink)}.error{color:var(--red);font-size:11px;line-height:1.5}.result-banner{display:flex;justify-content:space-between;align-items:center;background:#eaf2dc;padding:20px 24px;border-radius:10px;margin-bottom:20px;gap:15px}.result-banner h2{margin:4px 0;font-size:24px}.result-banner p{margin:0;font-size:12px}.review{margin-top:20px;padding:24px}.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.review-grid p{font-size:12px}.review-grid h3{font-size:13px}.review .caution{font-size:11px;border-top:1px solid var(--line);padding-top:16px}.lesson-layout{display:grid;grid-template-columns:235px 1fr;gap:40px;margin-top:32px}.lesson-nav a{display:flex;padding:15px 14px;border-radius:7px;gap:12px;text-decoration:none;color:var(--muted);margin-bottom:4px;font-size:12px}.lesson-nav a.active{background:var(--mint);color:var(--green);font-weight:700}.lesson-nav span{font-size:10px;color:#8b9585}.lesson{padding:32px 38px}.lesson h2{font-size:30px;margin-top:12px}.lesson p{max-width:700px;font-size:15px;line-height:1.85}.lesson .takeaway{border-left:3px solid #aac27e;background:#f3f6eb;padding:15px 20px;margin:25px 0;color:var(--ink);font-size:13px}.lesson-bottom{display:flex;justify-content:space-between;margin-top:25px;padding-top:22px;border-top:1px solid var(--line)}.visual{border:1px solid var(--line);background:#f7f9f2;border-radius:9px;padding:25px;margin:25px 0;text-align:center}.visual svg{max-height:190px;width:100%}.visual small{display:block;font-size:11px;color:var(--muted);margin-top:10px}.share-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:5px;max-width:350px;margin:0 auto 15px}.share-grid span{height:24px;background:#e0e7d8;border-radius:3px}.share-grid span:first-child{background:var(--green)}.order-examples{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:left}.order-examples div{background:white;padding:18px;border-radius:7px}.order-examples b{display:block;margin-bottom:12px}.order-examples span{font-size:12px;line-height:1.7;color:var(--muted)}.resource{padding:24px 0;border-bottom:1px solid var(--line)}.resource a{font-weight:bold;color:var(--green);text-decoration:none}.resource p{font-size:13px;margin-bottom:0}.source-content{max-width:850px}.source-content p,.source-content li{line-height:1.8;color:var(--muted)}.source-content li{margin-bottom:10px}.source-content details{margin:15px 0;border:1px solid var(--line);border-radius:8px;padding:16px;background:white}.source-content summary{cursor:pointer;font-weight:600}.history{margin-top:20px}.history summary{font-size:12px;cursor:pointer}.history table{width:100%;border-collapse:collapse;font-size:11px;margin-top:14px}.history th,.history td{text-align:left;padding:10px;border-bottom:1px solid var(--line)}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}@media(min-width:1500px){main{padding-top:55px}}@media(max-width:1000px){header{padding:0 25px}.practice{display:none}main{padding:32px 24px}.workspace{grid-template-columns:minmax(0,1fr) 270px}.chart-panel{padding:20px 16px}.ranges button{padding:7px}footer{margin:0 24px}.intro .guide{display:none}.metrics{gap:10px}.lesson-layout{gap:20px;grid-template-columns:190px 1fr}.lesson{padding:25px}}@media(max-width:720px){header{height:auto;padding:20px;flex-wrap:wrap;gap:17px}nav{gap:20px;width:100%;justify-content:space-between}nav a{font-size:11px;padding:6px 0 10px}.brand{font-size:20px}main{padding:30px 16px}h1{font-size:35px;letter-spacing:-1.5px}.intro{margin-bottom:25px}.intro p{font-size:13px}.workspace{grid-template-columns:1fr}.steps{gap:12px;justify-content:space-between;font-size:10px}.steps span{gap:5px}.chart-panel{padding:20px 15px}.date-stamp{font-size:9px;padding:6px}.identity h2{font-size:16px}.symbol-icon{width:34px;height:34px}.quote{margin-top:20px}.price{font-size:31px}.chart-wrap svg{height:255px}.metrics{grid-template-columns:repeat(2,1fr);gap:20px}.bottom-row{grid-template-columns:1fr;gap:12px;margin-top:20px}footer{flex-wrap:wrap;line-height:1.7;margin:0 16px}.lesson-layout{grid-template-columns:1fr;gap:15px}.lesson-nav{display:flex;gap:5px;overflow:auto}.lesson-nav a{white-space:nowrap;padding:10px}.lesson{padding:23px}.lesson h2{font-size:25px}.lesson p{font-size:14px}.order-examples,.review-grid{grid-template-columns:1fr}.result-banner{align-items:flex-start;flex-direction:column}.review{padding:20px}.chart-controls{gap:8px}.ranges button{padding:7px 8px}.source-content h2{font-size:22px}}
+/*
+Declare theme variables, reusable named values beginning with --. var(--name) retrieves them. Hex colors use # and digits/letters representing red, green and blue.
+*/:root{--ink:#182d2b;--muted:#697773;--green:#186b52;--mint:#eaf2dc;--line:#e1e6de;--paper:#f7f8f2;--red:#ab4d47}/*
+The universal selector matches every element. border-box makes declared widths include padding and borders for predictable sizing.
+*/*{box-sizing:border-box}/*
+Set overall background, text color and default font. Font lists provide fallback typefaces if the first cannot load; sans-serif means without decorative strokes.
+*/body{margin:0;background:var(--paper);color:var(--ink);font:14px 'DM Sans',Arial,sans-serif}/*
+Make form controls inherit (reuse) the surrounding font for a consistent appearance.
+*/button,input,select,textarea{font:inherit}/*
+Remove the browser tap-highlight flash; separate focus rules preserve keyboard navigation visibility.
+*/button,a,input,select,summary{ -webkit-tap-highlight-color:transparent}/*
+Mark links and buttons as direct tap targets for touch browsers.
+*/button,a{touch-action:manipulation}/*
+Let links inherit the surrounding color.
+*/a{color:inherit}/*
+Show a pointing-hand cursor for clickable buttons.
+*/button{cursor:pointer}/*
+Draw a visible keyboard-focus outline. Focus identifies which control receives keyboard input.
+*/button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #98b85b;outline-offset:3px}/*
+Style the top logo, navigation and practice reminder. These declarations control the selected part's size, spacing, color or alignment.
+*/header{height:91px;max-width:1440px;margin:auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:20px}/*
+Style the site name and raised LAB label. These declarations control the selected part's size, spacing, color or alignment.
+*/.brand{font:800 21px Manrope,Arial;text-decoration:none;letter-spacing:-1px;white-space:nowrap}/*
+Apply lighter text to brand spans except the icon; not() excludes a matching element.
+*/.brand>span:not(.brand-icon){font-weight:400}/*
+Create the circular rewind badge and center its symbol with inline Flexbox.
+*/.brand-icon{display:inline-flex;background:var(--ink);color:#d8edb5;border-radius:50%;width:30px;height:30px;align-items:center;justify-content:center;margin-right:8px;font-size:26px}/*
+Style the site name and raised LAB label. These declarations control the selected part's size, spacing, color or alignment.
+*/.brand sup{font:700 9px Arial;letter-spacing:1px;margin-left:5px;vertical-align:top}/*
+Style the navigation links. These declarations control the selected part's size, spacing, color or alignment.
+*/nav{display:flex;gap:30px;align-items:center}/*
+Style the navigation links. These declarations control the selected part's size, spacing, color or alignment.
+*/nav a{text-decoration:none;color:var(--muted);font-size:13px;padding:35px 0}/*
+Highlight the current view with darker text and an inset underline, drawn as a box-shadow so it does not shift layout.
+*/nav a.active{color:var(--ink);box-shadow:inset 0 -2px var(--green)}/*
+Style the compact practice notice. These declarations control the selected part's size, spacing, color or alignment.
+*/.practice{font-size:11px;color:var(--muted);white-space:nowrap}/*
+Create the small green status dot beside the practice notice.
+*/i{display:inline-block;width:6px;height:6px;background:#62954f;border-radius:50%;margin-right:6px}/*
+Style the centered main content area. These declarations control the selected part's size, spacing, color or alignment.
+*/main{max-width:1300px;margin:auto;padding:47px 36px 45px}/*
+Style the small uppercase introduction label. These declarations control the selected part's size, spacing, color or alignment.
+*/.eyebrow{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);display:flex;align-items:center;gap:9px}/*
+Create the short decorative line before the introductory label; content supplies the empty drawable part.
+*/.eyebrow:before{content:'';display:inline-block;width:19px;height:1px;background:var(--green)}/*
+Use the heading font for all heading levels shown here.
+*/h1,h2,h3{font-family:Manrope,Arial,sans-serif}/*
+Set the main headline size, weight, line spacing and maximum width.
+*/h1{font-size:46px;letter-spacing:-2px;line-height:1.16;margin:17px 0 13px;max-width:700px;font-weight:600}/*
+Give emphasized headline text a contrasting serif italic appearance.
+*/h1 em{font-family:Georgia,serif;font-weight:400;color:var(--green)}/*
+Set paragraph color and line-height, the distance between text lines.
+*/p{color:var(--muted);line-height:1.7}/*
+Size second-level headings and tighten letter spacing.
+*/h2{font-size:25px;letter-spacing:-.8px}/*
+Size smaller section headings.
+*/h3{font-size:16px}/*
+Style the introduction and beginner-guide link. These declarations control the selected part's size, spacing, color or alignment.
+*/.intro{display:flex;justify-content:space-between;align-items:center;margin-bottom:34px}/*
+Style the introduction and beginner-guide link. These declarations control the selected part's size, spacing, color or alignment.
+*/.intro p{max-width:610px;font-size:14px;margin-bottom:0}/*
+Style the introduction and beginner-guide link. These declarations control the selected part's size, spacing, color or alignment.
+*/.intro .guide{max-width:230px;line-height:1.7;font-size:12px;border-left:1px solid #ccd4c5;padding-left:24px;color:var(--muted)}/*
+Style the three-step progress indicator. These declarations control the selected part's size, spacing, color or alignment.
+*/.steps{display:flex;gap:30px;margin:0 0 27px;color:var(--muted);font-size:11px}/*
+Style the three-step progress indicator. These declarations control the selected part's size, spacing, color or alignment.
+*/.steps span{display:flex;align-items:center;gap:8px}/*
+Style the three-step progress indicator. These declarations control the selected part's size, spacing, color or alignment.
+*/.steps b{display:grid;place-items:center;border:1px solid #d3dbd0;width:21px;height:21px;border-radius:50%;font-size:10px}/*
+Style the three-step progress indicator. These declarations control the selected part's size, spacing, color or alignment.
+*/.steps .current{color:var(--green)}/*
+Style the three-step progress indicator. These declarations control the selected part's size, spacing, color or alignment.
+*/.steps .current b{background:var(--green);color:white;border-color:var(--green)}/*
+Use a two-column Grid for chart and ticket; minmax lets the chart shrink without overflow.
+*/.workspace{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:20px;align-items:start}/*
+Give reusable panels a white background, border and rounded corners. overflow:hidden clips content to the rounded edges.
+*/.panel{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}/*
+Style the chart panel spacing. These declarations control the selected part's size, spacing, color or alignment.
+*/.chart-panel{padding:25px 26px 14px}/*
+Style the company/date header row. These declarations control the selected part's size, spacing, color or alignment.
+*/.stock-top{display:flex;justify-content:space-between;gap:15px}/*
+Style the company label beside its badge. These declarations control the selected part's size, spacing, color or alignment.
+*/.identity{display:flex;gap:12px;align-items:center}/*
+Style the stock or mystery badge. These declarations control the selected part's size, spacing, color or alignment.
+*/.symbol-icon{width:42px;height:42px;display:grid;place-items:center;background:#f0f3ed;border-radius:10px;font-weight:bold;font-size:14px}/*
+Style the company label beside its badge. These declarations control the selected part's size, spacing, color or alignment.
+*/.identity h2{font-size:18px;margin:0 0 4px;letter-spacing:-.4px}/*
+Style the company label beside its badge. These declarations control the selected part's size, spacing, color or alignment.
+*/.identity small{font-size:11px;color:var(--muted)}/*
+Style the decision-date box. These declarations control the selected part's size, spacing, color or alignment.
+*/.date-stamp{border:1px solid var(--line);border-radius:6px;font-size:10px;padding:8px 11px;height:max-content;color:var(--muted);text-align:right}/*
+Style the decision-date box. These declarations control the selected part's size, spacing, color or alignment.
+*/.date-stamp strong{display:block;font-size:12px;color:var(--ink);margin-top:3px}/*
+Style the price/change row. These declarations control the selected part's size, spacing, color or alignment.
+*/.quote{display:flex;align-items:baseline;gap:12px;margin-top:25px}/*
+Style the prominent stock price. These declarations control the selected part's size, spacing, color or alignment.
+*/.price{font:600 34px Manrope;letter-spacing:-1.5px}/*
+Use theme green for nonnegative changes or returns.
+*/.positive{color:var(--green)}/*
+Use muted red for negative changes or returns.
+*/.negative{color:var(--red)}/*
+Style the price/change row. These declarations control the selected part's size, spacing, color or alignment.
+*/.quote small{font-size:11px}/*
+Style the chart-control row. These declarations control the selected part's size, spacing, color or alignment.
+*/.chart-controls{display:flex;justify-content:space-between;gap:10px;margin:24px 0 8px;align-items:center;flex-wrap:wrap}/*
+Style the time-range buttons. These declarations control the selected part's size, spacing, color or alignment.
+*/.ranges{display:flex;gap:2px}/*
+Style the time-range buttons. These declarations control the selected part's size, spacing, color or alignment.
+*/.ranges button,.view-toggle button{background:none;border:0;color:var(--muted);padding:7px 9px;font-size:10px;border-radius:5px}/*
+Style the time-range buttons. These declarations control the selected part's size, spacing, color or alignment.
+*/.ranges button.selected,.view-toggle button.selected{background:var(--mint);color:var(--green);font-weight:700}/*
+Style the line/candle toggle. These declarations control the selected part's size, spacing, color or alignment.
+*/.view-toggle{border:1px solid var(--line);padding:2px;border-radius:6px}/*
+Style the line/candle toggle. These declarations control the selected part's size, spacing, color or alignment.
+*/.view-toggle button{padding:5px 7px}/*
+Style the drawing container. These declarations control the selected part's size, spacing, color or alignment.
+*/.chart-wrap{position:relative}/*
+Style the SVG drawing size. These declarations control the selected part's size, spacing, color or alignment.
+*/.chart-wrap svg{width:100%;display:block;height:300px}/*
+Style the chart date and inspection hint. These declarations control the selected part's size, spacing, color or alignment.
+*/.chart-info{min-height:20px;color:var(--muted);font-size:10px}/*
+Style the chart key and line-color samples. These declarations control the selected part's size, spacing, color or alignment.
+*/.legend{display:flex;gap:16px;font-size:10px;color:var(--muted);padding:8px 0 15px;border-bottom:1px solid var(--line)}/*
+Style the chart key and line-color samples. These declarations control the selected part's size, spacing, color or alignment.
+*/.legend b{display:inline-block;width:13px;height:2px;vertical-align:middle;margin-right:5px;background:var(--green)}/*
+Style the chart key and line-color samples. These declarations control the selected part's size, spacing, color or alignment.
+*/.legend .gold{background:#b6a46a}/*
+Style the historical volume/range statistics. These declarations control the selected part's size, spacing, color or alignment.
+*/.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:18px 0 10px}/*
+Style the historical volume/range statistics. These declarations control the selected part's size, spacing, color or alignment.
+*/.metrics small{display:block;color:var(--muted);font-size:10px;margin-bottom:7px}/*
+Style the historical volume/range statistics. These declarations control the selected part's size, spacing, color or alignment.
+*/.metrics strong{font-size:12px}/*
+Style the data-coverage explanation. These declarations control the selected part's size, spacing, color or alignment.
+*/.data-note{font-size:10px;line-height:1.6;color:var(--muted);padding-top:10px}/*
+Style the order/result panel and its explanatory text. These declarations control the selected part's size, spacing, color or alignment.
+*/.ticket{padding:23px}/*
+Style the order/result panel and its explanatory text. These declarations control the selected part's size, spacing, color or alignment.
+*/.ticket h3{margin:0 0 6px}/*
+Style the order/result panel and its explanatory text. These declarations control the selected part's size, spacing, color or alignment.
+*/.ticket p{font-size:11px;line-height:1.6;margin:0 0 20px}/*
+Style the practice-cash box. These declarations control the selected part's size, spacing, color or alignment.
+*/.balance{display:flex;justify-content:space-between;padding:12px;background:#f4f6ef;border-radius:6px;font-size:11px;margin-bottom:20px}/*
+Style the practice-cash box. These declarations control the selected part's size, spacing, color or alignment.
+*/.balance span{color:var(--muted)}/*
+Space and style the text naming a form field.
+*/label{display:block;font-size:11px;font-weight:600;margin-top:17px;margin-bottom:7px}/*
+Give fields full available width, consistent border, padding, background and text color.
+*/select,input,textarea{width:100%;border:1px solid #dce2d8;border-radius:6px;background:white;padding:11px;color:var(--ink)}/*
+This attribute selector matches checkboxes, keeping them at natural width rather than stretching them like text fields.
+*/input[type=checkbox]{width:auto}/*
+Permit vertical resizing of the reasoning box while reserving a minimum height.
+*/textarea{resize:vertical;min-height:64px}/*
+Style the investment estimate. These declarations control the selected part's size, spacing, color or alignment.
+*/.estimate{display:flex;justify-content:space-between;font-size:11px;padding:17px 0;margin-top:4px}/*
+Create reusable button styling, also used on links. Inline Flexbox centers the label and arrow.
+*/.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;border:1px solid var(--line);background:white;color:var(--ink);padding:12px 18px;border-radius:7px;font-size:12px;font-weight:600;text-decoration:none}/*
+Two joined classes require both on the same element; make the primary action green with white text.
+*/.btn.primary{background:var(--green);color:white;border-color:var(--green)}/*
+Slightly darken a button under the pointer. A filter changes the rendered appearance without changing its stored color.
+*/.btn:hover{filter:brightness(.96)}/*
+Style the order/result panel and its explanatory text. These declarations control the selected part's size, spacing, color or alignment.
+*/.ticket .btn{width:100%;margin:5px 0}/*
+Style the order/result panel and its explanatory text. These declarations control the selected part's size, spacing, color or alignment.
+*/.ticket .pass{background:transparent;color:var(--muted)}/*
+Style the order/result panel and its explanatory text. These declarations control the selected part's size, spacing, color or alignment.
+*/.ticket .fine{font-size:10px;margin:14px 0 0;text-align:center}/*
+Style the learning tip below the ticket. These declarations control the selected part's size, spacing, color or alignment.
+*/.small-tip{padding:16px 20px;margin-top:14px;background:#eff3e8;border:1px solid #e1e7d7;border-radius:9px;font-size:11px;line-height:1.7;color:#5f6d5a}/*
+Style the learning tip below the ticket. These declarations control the selected part's size, spacing, color or alignment.
+*/.small-tip strong{color:var(--ink);display:block;font-size:11px;margin-bottom:3px}/*
+Style the three introductory facts. These declarations control the selected part's size, spacing, color or alignment.
+*/.bottom-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:25px;margin-top:29px}/*
+Style the three introductory facts. These declarations control the selected part's size, spacing, color or alignment.
+*/.bottom-row>div{display:flex;gap:12px;padding:7px 5px}/*
+Style the three introductory facts. These declarations control the selected part's size, spacing, color or alignment.
+*/.bottom-row .num{color:#839078;font-size:19px;font-family:Georgia}/*
+Style the three introductory facts. These declarations control the selected part's size, spacing, color or alignment.
+*/.bottom-row h3{font-size:12px;margin:0 0 4px}/*
+Style the three introductory facts. These declarations control the selected part's size, spacing, color or alignment.
+*/.bottom-row p{font-size:11px;margin:0}/*
+Style controls visually presented as text links. These declarations control the selected part's size, spacing, color or alignment.
+*/.link-btn{border:0;background:none;padding:0;color:var(--green);font-size:11px;text-decoration:underline;cursor:pointer}/*
+Style the footer and its brand. These declarations control the selected part's size, spacing, color or alignment.
+*/footer{border-top:1px solid var(--line);max-width:1228px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:24px 0;gap:15px;color:var(--muted);font-size:10px}/*
+Style the footer and its brand. These declarations control the selected part's size, spacing, color or alignment.
+*/footer .brand{font-size:15px;color:var(--ink)}/*
+Style the form-validation message. These declarations control the selected part's size, spacing, color or alignment.
+*/.error{color:var(--red);font-size:11px;line-height:1.5}/*
+Style the revealed outcome and next-round control. These declarations control the selected part's size, spacing, color or alignment.
+*/.result-banner{display:flex;justify-content:space-between;align-items:center;background:#eaf2dc;padding:20px 24px;border-radius:10px;margin-bottom:20px;gap:15px}/*
+Style the revealed outcome and next-round control. These declarations control the selected part's size, spacing, color or alignment.
+*/.result-banner h2{margin:4px 0;font-size:24px}/*
+Style the revealed outcome and next-round control. These declarations control the selected part's size, spacing, color or alignment.
+*/.result-banner p{margin:0;font-size:12px}/*
+Style the learning-review panel. These declarations control the selected part's size, spacing, color or alignment.
+*/.review{margin-top:20px;padding:24px}/*
+Style the observation columns. These declarations control the selected part's size, spacing, color or alignment.
+*/.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}/*
+Style the observation columns. These declarations control the selected part's size, spacing, color or alignment.
+*/.review-grid p{font-size:12px}/*
+Style the observation columns. These declarations control the selected part's size, spacing, color or alignment.
+*/.review-grid h3{font-size:13px}/*
+Style the learning-review panel. These declarations control the selected part's size, spacing, color or alignment.
+*/.review .caution{font-size:11px;border-top:1px solid var(--line);padding-top:16px}/*
+Style the lesson navigation/content columns. These declarations control the selected part's size, spacing, color or alignment.
+*/.lesson-layout{display:grid;grid-template-columns:235px 1fr;gap:40px;margin-top:32px}/*
+Style the numbered lesson navigation. These declarations control the selected part's size, spacing, color or alignment.
+*/.lesson-nav a{display:flex;padding:15px 14px;border-radius:7px;gap:12px;text-decoration:none;color:var(--muted);margin-bottom:4px;font-size:12px}/*
+Style the numbered lesson navigation. These declarations control the selected part's size, spacing, color or alignment.
+*/.lesson-nav a.active{background:var(--mint);color:var(--green);font-weight:700}/*
+Style the numbered lesson navigation. These declarations control the selected part's size, spacing, color or alignment.
+*/.lesson-nav span{font-size:10px;color:#8b9585}/*
+Style the reading panel and takeaway. These declarations control the selected part's size, spacing, color or alignment.
+*/.lesson{padding:32px 38px}/*
+Style the reading panel and takeaway. These declarations control the selected part's size, spacing, color or alignment.
+*/.lesson h2{font-size:30px;margin-top:12px}/*
+Style the reading panel and takeaway. These declarations control the selected part's size, spacing, color or alignment.
+*/.lesson p{max-width:700px;font-size:15px;line-height:1.85}/*
+Style the reading panel and takeaway. These declarations control the selected part's size, spacing, color or alignment.
+*/.lesson .takeaway{border-left:3px solid #aac27e;background:#f3f6eb;padding:15px 20px;margin:25px 0;color:var(--ink);font-size:13px}/*
+Style the previous/next links. These declarations control the selected part's size, spacing, color or alignment.
+*/.lesson-bottom{display:flex;justify-content:space-between;margin-top:25px;padding-top:22px;border-top:1px solid var(--line)}/*
+Style the teaching drawings/captions. These declarations control the selected part's size, spacing, color or alignment.
+*/.visual{border:1px solid var(--line);background:#f7f9f2;border-radius:9px;padding:25px;margin:25px 0;text-align:center}/*
+Style the teaching drawings/captions. These declarations control the selected part's size, spacing, color or alignment.
+*/.visual svg{max-height:190px;width:100%}/*
+Style the teaching drawings/captions. These declarations control the selected part's size, spacing, color or alignment.
+*/.visual small{display:block;font-size:11px;color:var(--muted);margin-top:10px}/*
+Arrange the ownership illustration in ten equal-width columns.
+*/.share-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:5px;max-width:350px;margin:0 auto 15px}/*
+Style the share illustration squares. These declarations control the selected part's size, spacing, color or alignment.
+*/.share-grid span{height:24px;background:#e0e7d8;border-radius:3px}/*
+Highlight the first share square. first-child selects the first element among its siblings.
+*/.share-grid span:first-child{background:var(--green)}/*
+Style the order-example cards. These declarations control the selected part's size, spacing, color or alignment.
+*/.order-examples{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:left}/*
+Style the order-example cards. These declarations control the selected part's size, spacing, color or alignment.
+*/.order-examples div{background:white;padding:18px;border-radius:7px}/*
+Style the order-example cards. These declarations control the selected part's size, spacing, color or alignment.
+*/.order-examples b{display:block;margin-bottom:12px}/*
+Style the order-example cards. These declarations control the selected part's size, spacing, color or alignment.
+*/.order-examples span{font-size:12px;line-height:1.7;color:var(--muted)}/*
+Style the further-reading links/descriptions. These declarations control the selected part's size, spacing, color or alignment.
+*/.resource{padding:24px 0;border-bottom:1px solid var(--line)}/*
+Style the further-reading links/descriptions. These declarations control the selected part's size, spacing, color or alignment.
+*/.resource a{font-weight:bold;color:var(--green);text-decoration:none}/*
+Style the further-reading links/descriptions. These declarations control the selected part's size, spacing, color or alignment.
+*/.resource p{font-size:13px;margin-bottom:0}/*
+Style the sources and limitations area. These declarations control the selected part's size, spacing, color or alignment.
+*/.source-content{max-width:850px}/*
+Style the sources and limitations area. These declarations control the selected part's size, spacing, color or alignment.
+*/.source-content p,.source-content li{line-height:1.8;color:var(--muted)}/*
+Style the sources and limitations area. These declarations control the selected part's size, spacing, color or alignment.
+*/.source-content li{margin-bottom:10px}/*
+Style the sources and limitations area. These declarations control the selected part's size, spacing, color or alignment.
+*/.source-content details{margin:15px 0;border:1px solid var(--line);border-radius:8px;padding:16px;background:white}/*
+Style the sources and limitations area. These declarations control the selected part's size, spacing, color or alignment.
+*/.source-content summary{cursor:pointer;font-weight:600}/*
+Style the expandable practice journal. These declarations control the selected part's size, spacing, color or alignment.
+*/.history{margin-top:20px}/*
+Style the expandable practice journal. These declarations control the selected part's size, spacing, color or alignment.
+*/.history summary{font-size:12px;cursor:pointer}/*
+Expand the history table to full width and collapse adjacent cell borders into shared lines.
+*/.history table{width:100%;border-collapse:collapse;font-size:11px;margin-top:14px}/*
+Style the expandable practice journal. These declarations control the selected part's size, spacing, color or alignment.
+*/.history th,.history td{text-align:left;padding:10px;border-bottom:1px solid var(--line)}/*
+Keep text accessible to screen readers while visually hiding its tiny clipped box.
+*/.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}/*
+Media query: apply these nested rules only at the matching screen width. min-width means at least this wide; max-width means no wider than this. The enclosed overrides adapt the layout to large screens, tablets or phones.
+*/@media(min-width:1500px){/*
+Style the centered main content area. These declarations control the selected part's size, spacing, color or alignment.
+*/main{padding-top:55px}}/*
+Media query: apply these nested rules only at the matching screen width. min-width means at least this wide; max-width means no wider than this. The enclosed overrides adapt the layout to large screens, tablets or phones.
+*/@media(max-width:1000px){/*
+Style the top logo, navigation and practice reminder. These declarations control the selected part's size, spacing, color or alignment.
+*/header{padding:0 25px}/*
+Style the compact practice notice. These declarations control the selected part's size, spacing, color or alignment.
+*/.practice{display:none}/*
+Style the centered main content area. These declarations control the selected part's size, spacing, color or alignment.
+*/main{padding:32px 24px}/*
+Use a two-column Grid for chart and ticket; minmax lets the chart shrink without overflow.
+*/.workspace{grid-template-columns:minmax(0,1fr) 270px}/*
+Style the chart panel spacing. These declarations control the selected part's size, spacing, color or alignment.
+*/.chart-panel{padding:20px 16px}/*
+Style the time-range buttons. These declarations control the selected part's size, spacing, color or alignment.
+*/.ranges button{padding:7px}/*
+Style the footer and its brand. These declarations control the selected part's size, spacing, color or alignment.
+*/footer{margin:0 24px}/*
+Style the introduction and beginner-guide link. These declarations control the selected part's size, spacing, color or alignment.
+*/.intro .guide{display:none}/*
+Style the historical volume/range statistics. These declarations control the selected part's size, spacing, color or alignment.
+*/.metrics{gap:10px}/*
+Style the lesson navigation/content columns. These declarations control the selected part's size, spacing, color or alignment.
+*/.lesson-layout{gap:20px;grid-template-columns:190px 1fr}/*
+Style the reading panel and takeaway. These declarations control the selected part's size, spacing, color or alignment.
+*/.lesson{padding:25px}}/*
+Media query: apply these nested rules only at the matching screen width. min-width means at least this wide; max-width means no wider than this. The enclosed overrides adapt the layout to large screens, tablets or phones.
+*/@media(max-width:720px){/*
+Style the top logo, navigation and practice reminder. These declarations control the selected part's size, spacing, color or alignment.
+*/header{height:auto;padding:20px;flex-wrap:wrap;gap:17px}/*
+Style the navigation links. These declarations control the selected part's size, spacing, color or alignment.
+*/nav{gap:20px;width:100%;justify-content:space-between}/*
+Style the navigation links. These declarations control the selected part's size, spacing, color or alignment.
+*/nav a{font-size:11px;padding:6px 0 10px}/*
+Style the site name and raised LAB label. These declarations control the selected part's size, spacing, color or alignment.
+*/.brand{font-size:20px}/*
+Style the centered main content area. These declarations control the selected part's size, spacing, color or alignment.
+*/main{padding:30px 16px}/*
+Set the main headline size, weight, line spacing and maximum width.
+*/h1{font-size:35px;letter-spacing:-1.5px}/*
+Style the introduction and beginner-guide link. These declarations control the selected part's size, spacing, color or alignment.
+*/.intro{margin-bottom:25px}/*
+Style the introduction and beginner-guide link. These declarations control the selected part's size, spacing, color or alignment.
+*/.intro p{font-size:13px}/*
+Use a two-column Grid for chart and ticket; minmax lets the chart shrink without overflow.
+*/.workspace{grid-template-columns:1fr}/*
+Style the three-step progress indicator. These declarations control the selected part's size, spacing, color or alignment.
+*/.steps{gap:12px;justify-content:space-between;font-size:10px}/*
+Style the three-step progress indicator. These declarations control the selected part's size, spacing, color or alignment.
+*/.steps span{gap:5px}/*
+Style the chart panel spacing. These declarations control the selected part's size, spacing, color or alignment.
+*/.chart-panel{padding:20px 15px}/*
+Style the decision-date box. These declarations control the selected part's size, spacing, color or alignment.
+*/.date-stamp{font-size:9px;padding:6px}/*
+Style the company label beside its badge. These declarations control the selected part's size, spacing, color or alignment.
+*/.identity h2{font-size:16px}/*
+Style the stock or mystery badge. These declarations control the selected part's size, spacing, color or alignment.
+*/.symbol-icon{width:34px;height:34px}/*
+Style the price/change row. These declarations control the selected part's size, spacing, color or alignment.
+*/.quote{margin-top:20px}/*
+Style the prominent stock price. These declarations control the selected part's size, spacing, color or alignment.
+*/.price{font-size:31px}/*
+Style the SVG drawing size. These declarations control the selected part's size, spacing, color or alignment.
+*/.chart-wrap svg{height:255px}/*
+Style the historical volume/range statistics. These declarations control the selected part's size, spacing, color or alignment.
+*/.metrics{grid-template-columns:repeat(2,1fr);gap:20px}/*
+Style the three introductory facts. These declarations control the selected part's size, spacing, color or alignment.
+*/.bottom-row{grid-template-columns:1fr;gap:12px;margin-top:20px}/*
+Style the footer and its brand. These declarations control the selected part's size, spacing, color or alignment.
+*/footer{flex-wrap:wrap;line-height:1.7;margin:0 16px}/*
+Style the lesson navigation/content columns. These declarations control the selected part's size, spacing, color or alignment.
+*/.lesson-layout{grid-template-columns:1fr;gap:15px}/*
+Style the numbered lesson navigation. These declarations control the selected part's size, spacing, color or alignment.
+*/.lesson-nav{display:flex;gap:5px;overflow:auto}/*
+Style the numbered lesson navigation. These declarations control the selected part's size, spacing, color or alignment.
+*/.lesson-nav a{white-space:nowrap;padding:10px}/*
+Style the reading panel and takeaway. These declarations control the selected part's size, spacing, color or alignment.
+*/.lesson{padding:23px}/*
+Style the reading panel and takeaway. These declarations control the selected part's size, spacing, color or alignment.
+*/.lesson h2{font-size:25px}/*
+Style the reading panel and takeaway. These declarations control the selected part's size, spacing, color or alignment.
+*/.lesson p{font-size:14px}/*
+Style the order-example cards. These declarations control the selected part's size, spacing, color or alignment.
+*/.order-examples,.review-grid{grid-template-columns:1fr}/*
+Style the revealed outcome and next-round control. These declarations control the selected part's size, spacing, color or alignment.
+*/.result-banner{align-items:flex-start;flex-direction:column}/*
+Style the learning-review panel. These declarations control the selected part's size, spacing, color or alignment.
+*/.review{padding:20px}/*
+Style the chart-control row. These declarations control the selected part's size, spacing, color or alignment.
+*/.chart-controls{gap:8px}/*
+Style the time-range buttons. These declarations control the selected part's size, spacing, color or alignment.
+*/.ranges button{padding:7px 8px}/*
+Style the sources and limitations area. These declarations control the selected part's size, spacing, color or alignment.
+*/.source-content h2{font-size:22px}}
 /* Clearer chart labels and a plain-language paper order ticket. */
-.chart-wrap svg text{font-family:'DM Sans',Arial,sans-serif;letter-spacing:.15px}
-.chart-info{font-size:11px;color:#405348;line-height:1.6;padding:4px 0 7px}
-.ticket .hold-help{font-size:10px;line-height:1.6;margin:7px 0 0;color:#66735f}
-.share-estimate{font-size:11px;color:#405348;margin:-5px 0 13px;line-height:1.6}
-@media(max-width:720px){.chart-wrap svg{height:300px}.chart-panel{padding:20px 12px}}
-.ticket .limit-explanation{background:#f5eff8;border-left:3px solid #8b5aa7;padding:11px 12px;color:#594467;font-size:11px;line-height:1.7;margin-top:8px}
+/*
+Style the chart labels. These declarations control the selected part's size, spacing, color or alignment.
+*/.chart-wrap svg text{font-family:'DM Sans',Arial,sans-serif;letter-spacing:.15px}
+/*
+Style the chart date and inspection hint. These declarations control the selected part's size, spacing, color or alignment.
+*/.chart-info{font-size:11px;color:#405348;line-height:1.6;padding:4px 0 7px}
+/*
+Style the order/result panel and its explanatory text. These declarations control the selected part's size, spacing, color or alignment.
+*/.ticket .hold-help{font-size:10px;line-height:1.6;margin:7px 0 0;color:#66735f}
+/*
+Style the fractional-share estimate. These declarations control the selected part's size, spacing, color or alignment.
+*/.share-estimate{font-size:11px;color:#405348;margin:-5px 0 13px;line-height:1.6}
+/*
+Media query: apply these nested rules only at the matching screen width. min-width means at least this wide; max-width means no wider than this. The enclosed overrides adapt the layout to large screens, tablets or phones.
+*/@media(max-width:720px){/*
+Style the SVG drawing size. These declarations control the selected part's size, spacing, color or alignment.
+*/.chart-wrap svg{height:300px}/*
+Style the chart panel spacing. These declarations control the selected part's size, spacing, color or alignment.
+*/.chart-panel{padding:20px 12px}}
+/*
+Give the limit-fill explanation a purple border and pale background.
+*/.ticket .limit-explanation{background:#f5eff8;border-left:3px solid #8b5aa7;padding:11px 12px;color:#594467;font-size:11px;line-height:1.7;margin-top:8px}
 
-.layout-1{color:var(--muted)}
-.layout-2{font-size:11px}
-.layout-3{font-weight:400}
-.layout-4{margin-top:13px}
-.layout-5{margin-top:14px}
-.layout-6{margin-top:15px}
+/*
+Preserve muted text color formerly applied directly in HTML; keeping it here supports the security policy.
+*/.layout-1{color:var(--muted)}
+/*
+Preserve the small source-reference paragraph size.
+*/.layout-2{font-size:11px}
+/*
+Preserve normal weight on the optional-field label.
+*/.layout-3{font-weight:400}
+/*
+Preserve top spacing above the order-ticket heading.
+*/.layout-4{margin-top:13px}
+/*
+Preserve top spacing above Clear journal.
+*/.layout-5{margin-top:14px}
+/*
+Preserve top spacing above the result-ticket heading.
+*/.layout-6{margin-top:15px}

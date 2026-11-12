@@ -1,2 +1,40 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'"><meta name="referrer" content="no-referrer"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Learn stock market basics and practice decisions with real historical prices. A free educational stock trading simulator."><title>Market Rewind — A little practice. A better perspective.</title><link rel="stylesheet" href="./style.css"><script defer src="./prices.js"></script><script defer src="./app.js"></script></head><body><header><a class="brand" href="#play" aria-label="Market Rewind home"><span class="brand-icon">↶</span> market<span>rewind</span><sup>LAB</sup></a><nav aria-label="Main navigation"><a href="#play" id="nav-play">The simulator</a><a href="#learn" id="nav-learn">Learn the basics</a><a href="#sources" id="nav-sources">Sources & methodology</a></nav><span class="practice"><i></i> Real history. Paper money.</span></header><main id="app"></main><footer><a class="brand" href="#play">↶ market<span>rewind</span></a><span>Practice your thinking. Not your luck.</span><span>Educational only · No real trades · <a href="#sources">Data & limitations</a></span></footer><noscript>This game requires JavaScript. Please enable it in your browser.</noscript></body></html>
+<!--
+HTML (HyperText Markup Language) describes page structure. A tag is a marker in angle brackets, such as <header>. An attribute supplies extra information inside a tag. Opening and closing tags surround content. CSS (Cascading Style Sheets) describes appearance in a stylesheet file. JavaScript supplies interactive instructions in a script file. An asset is a file used by the site, such as a font or script. Comments are explanations for readers and are not displayed. The document type above tells the browser to use modern HTML rules.
+--><!--
+This outer element wraps the document. lang="en" identifies English for assistive technology, such as a screen reader that speaks page text.
+--><html lang="en"><!--
+The head holds page settings and file references, rather than the visible game interface.
+--><head><!--
+UTF-8 is the character encoding: the rule for converting stored bytes into letters and symbols. It supports the arrows used on this site.
+--><meta charset="utf-8"><!--
+A security policy is a set of browser restrictions. This Content Security Policy allows our own scripts, styles and fonts but blocks inline code, background connections and embedded pages. self means this website; none means disallow. It is placed before assets so it applies when they load.
+--><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'"><!--
+A referrer is the address of the page someone came from. This setting asks the browser not to send that address when following links.
+--><meta name="referrer" content="no-referrer"><!--
+The viewport is the visible page area. This setting uses the device screen width, allowing the same layout to adapt to phones and tablets.
+--><meta name="viewport" content="width=device-width,initial-scale=1"><!--
+This description summarizes the site for search engines and other tools; it is not a paragraph on the visible page.
+--><meta name="description" content="Learn stock market basics and practice decisions with real historical prices. A free educational stock trading simulator."><!--
+This is the name shown on the browser tab.
+--><title>Market Rewind — A little practice. A better perspective.</title><!--
+CSS (Cascading Style Sheets) controls appearance. This link loads style.css. ./ means start from this file folder, which also lets the app work in a GitHub Pages project subfolder.
+--><link rel="stylesheet" href="./style.css"><!--
+JavaScript is the language that supplies calculations and interactivity. This first file supplies historical stock records. defer waits until HTML has been read; deferred scripts then run in their written order, so data is available before the application needs it.
+--><script defer src="./prices.js"></script><!--
+This second JavaScript file runs the game, chart, lessons and saved journal. src names the file to load. The valid filename app.js plays the same role that a file named script.js would.
+--><script defer src="./app.js"></script></head><!--
+The body contains the visible interface. JavaScript will fill in the central game area after the document loads.
+--><body><!--
+The header groups the site name, navigation and practice-money reminder at the top.
+--><header><!--
+An a element is a link. A class is a reusable label CSS can style. href="#play" changes the hash, the # part of the address that this app uses to choose a screen. aria-label supplies a clear name for assistive tools.
+--><a class="brand" href="#play" aria-label="Market Rewind home"><span class="brand-icon">↶</span> market<span>rewind</span><sup>LAB</sup></a><!--
+Navigation is the group of links between the simulator, lessons and sources. Its aria-label names the group for assistive technology.
+--><nav aria-label="Main navigation"><a href="#play" id="nav-play">The simulator</a><a href="#learn" id="nav-learn">Learn the basics</a><a href="#sources" id="nav-sources">Sources & methodology</a></nav><span class="practice"><i></i> Real history. Paper money.</span></header><!--
+The main element identifies the central content. An id is a unique label; id="app" lets JavaScript find this initially empty element and insert the selected screen.
+--><main id="app"></main><!--
+The footer groups the bottom brand, educational-use reminder and source/limitations link.
+--><footer><a class="brand" href="#play">↶ market<span>rewind</span></a><span>Practice your thinking. Not your luck.</span><span>Educational only · No real trades · <a href="#sources">Data & limitations</a></span></footer><!--
+This message explains why the game cannot run if the visitor has disabled JavaScript.
+--><noscript>This game requires JavaScript. Please enable it in your browser.</noscript></body></html>
